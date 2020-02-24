@@ -25,7 +25,10 @@ def main():
                         led.update(Leds.rgb_off())
                     elif (status.text == 'true'):
                         led.update(Leds.rgb_on(Color.PURPLE))
-                time.sleep(0.10)
+                  time.sleep(0.25)
+                else
+                  print('Error contacting server, backing off for 10 seconds')
+                  time.sleep(10)
             except Exception as e:
                 print("Error getting status: ", e)
 
